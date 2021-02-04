@@ -8,3 +8,7 @@ For example, the array of urls has the keyword dog in them. So, if I call the fu
 
 I installed jest with npm install --save-dev jest. I updated the package.json to watch for and test the changes in the javascript files.
 
+Also included is a sctipt for asynchronous testing using the Star Wars API (SWAPI). 
+
+I am testing the ability to fetch the appropriate data per each request.
+
