@@ -9,10 +9,22 @@ dbMock = [
 	'panpizza.com'
 ];
 
-it('this is a test', () => {
-	expect('hello').toBe('hello')
-});
+describe('urlSearch', () => {
 
-it('it is searching', () => {
-	expect(urlSearch('pizza', dbMock)).toEqual(['pizza.com', 'panpizza.com'])
+	it('this is a test', () => {
+		expect('hello').toBe('hello')
+	});
+
+	it('it is searching', () => {
+		expect(urlSearch('pizza', dbMock)).toEqual(['pizza.com', 'panpizza.com'])
+	});
+
+	it('work with undefined and null input', () => {
+		expect(urlSearch(undefined, dbMock)).toEqual([]);
+		expect(urlSearch(null, dbMock)).toEqual([]);
+	});
+
+	it('no more than 3 matches', () => {
+		expect(urlSearch('.com', dbMock).length).toEqual([3]);
+	});
 })
